@@ -12,19 +12,24 @@ body {
     1fr;
 }
 
+/* --- HEADER --- */
+
 header {
   grid-area: header;
   background-color: white;
 }
 
+/* --- MAIN SECTION --- */
 main {
   grid-area: main;
 
-  display: grid;
-  background-color: grey;
   width: 100vw;
+
+  display: grid;
   align-items: center;
   justify-items: center;
+
+  background-color: rgb(222, 226, 205);
 }
 
 .main-container {
@@ -39,7 +44,6 @@ main {
 /* --- LEFT BAR --- */
 .left-bar {
   grid-area: left-bar;
-  background-color: green;
 
   display: grid;
   grid-template:
@@ -51,26 +55,26 @@ main {
 
 .profile {
   grid-area: profile;
-  background-color: pink;
-  margin: 10px;
 }
 
 .visitor-analytics {
   grid-area: visitor-analytics;
-  background-color: pink;
-  margin: 10px;
 }
 
 .events {
   grid-area: events;
+}
+
+.profile,
+.visitor-analytics,
+.events {
   background-color: pink;
-  margin: 10px;
+  margin: 5px;
 }
 
 /* --- CENTER --- */
 .center {
   grid-area: center;
-  background-color: purple;
 
   display: grid;
   grid-template:
@@ -81,20 +85,21 @@ main {
 
 .post {
   grid-area: post;
-  background-color: blue;
-  margin: 10px;
 }
 
 .feed {
   grid-area: feed;
+}
+
+.post,
+.feed {
   background-color: blue;
-  margin: 10px;
+  margin: 5px;
 }
 
 /* --- RIGHT BAR --- */
 .right-bar {
   grid-area: right-bar;
-  background-color: pink;
 
   display: grid;
   grid-template:
@@ -106,18 +111,25 @@ main {
 
 .news {
   grid-area: news;
-  background-color: yellow;
-  margin: 10px;
 }
 
 .courses {
   grid-area: courses;
-  background-color: yellow;
-  margin: 10px;
 }
 
 .follow {
   grid-area: follow;
+}
+
+.news,
+.courses,
+.follow {
   background-color: yellow;
-  margin: 10px;
+  margin: 5px;
+}
+
+/* UTILITY STYLES */
+
+.bg-main {
+  background-color: rgb(222, 226, 205);
 }
