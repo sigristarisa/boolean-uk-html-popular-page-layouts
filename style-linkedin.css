@@ -1,1 +1,42 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
+  margin: 0;
+  height: 100vh;
+  display: grid;
+  grid-template:
+    "header" 100px
+    "main" 1fr /
+    1fr;
+}
+
+header {
+  grid-area: header;
+  background-color: red;
+}
+
+main {
+  grid-area: main;
+
+  display: grid;
+  grid-template:
+    "left-bar center right-bar" 1fr /
+    1fr 1fr 1fr;
+}
+
+.left-bar {
+  grid-area: left-bar;
+  background-color: green;
+}
+
+.center {
+  grid-area: center;
+  background-color: purple;
+}
+
+.right-bar {
+  grid-area: right-bar;
+  background-color: pink;
+}
