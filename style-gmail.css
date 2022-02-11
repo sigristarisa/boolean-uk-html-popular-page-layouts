@@ -1,6 +1,6 @@
 * {
   box-sizing: border-box;
-  border: grey solid 1px;
+  border: grey solid 0.2px;
 }
 
 body {
@@ -18,12 +18,12 @@ body {
 /* --- HEADER --- */
 header {
   grid-area: header;
+  height: 100%;
 }
 
 /* --- MAIN SECTION --- */
 main {
   grid-area: main;
-
   display: grid;
   grid-template:
     "left-bar center setting right-bar" 1fr /
