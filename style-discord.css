@@ -1,3 +1,88 @@
+* {
+  box-sizing: border-box;
+}
+
 body {
-  background-color: red;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template:
+    "left-bar center-bar main" 1fr /
+    1fr 3fr 16fr;
+}
+
+/* --- LEFT BAR --- */
+.left-bar {
+  grid-area: left-bar;
+  border: red 1px solid;
+}
+
+/* --- CENTER BAR--- */
+.center-bar {
+  grid-area: center-bar;
+  border: red 1px solid;
+
+  display: grid;
+  grid-template:
+    "toggle" 1fr
+    "invite" 3fr
+    "channel-list" 15fr
+    "profile" 1fr /
+    1fr;
+}
+
+.toggle {
+  grid-area: toggle;
+  border: blue 1px solid;
+}
+
+.invite {
+  grid-area: invite;
+  border: blue 1px solid;
+}
+
+.channel-list {
+  grid-area: channel-list;
+  border: blue 1px solid;
+}
+
+.profile {
+  grid-area: profile;
+  border: blue 1px solid;
+}
+
+/* --- MAIN SECTION--- */
+main {
+  grid-area: main;
+  border: red 1px solid;
+
+  display: grid;
+  grid-template:
+    "header" 1fr
+    "channel" 16fr
+    "message" 2fr
+    "message-input" 1fr /
+    1fr;
+}
+
+.header {
+  grid-area: header;
+  border: purple 2px solid;
+}
+
+.channel {
+  grid-area: channel;
+  border: purple 2px solid;
+}
+
+.message {
+  grid-area: message;
+  border: purple 2px solid;
+}
+
+.message-input {
+  grid-area: message-input;
+  border: purple 2px solid;
 }
