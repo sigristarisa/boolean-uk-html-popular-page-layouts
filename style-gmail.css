@@ -1,3 +1,107 @@
+* {
+  box-sizing: border-box;
+  border: grey solid 1px;
+}
+
 body {
-  background-color: red;
+  margin: 0;
+  width: 100vw;
+  height: 100vh;
+
+  display: grid;
+  grid-template:
+    "header" 1fr
+    "main" 9fr /
+    1fr;
+}
+
+/* --- HEADER --- */
+header {
+  grid-area: header;
+}
+
+/* --- MAIN SECTION --- */
+main {
+  grid-area: main;
+
+  display: grid;
+  grid-template:
+    "left-bar center setting right-bar" 1fr /
+    5fr 10fr 5fr 1fr;
+}
+
+/* --- LEFT BAR--- */
+.left-bar {
+  grid-area: left-bar;
+
+  display: grid;
+  grid-template:
+    "inbox" 3fr
+    "meet" 1fr
+    "chat" 2fr /
+    1fr;
+}
+
+.inbox {
+  grid-area: inbox;
+}
+
+.meet {
+  grid-area: meet;
+}
+
+.chat {
+  grid-area: chat;
+}
+
+/* --- CENTER --- */
+.center {
+  grid-area: center;
+
+  display: grid;
+  grid-template:
+    "email-menu" 1fr
+    "email" 9fr /
+    1fr;
+}
+
+.email-menu {
+  grid-area: email-menu;
+}
+
+.email {
+  grid-area: email;
+}
+
+/* ---  SETTING --- */
+.setting {
+  grid-area: setting;
+
+  display: grid;
+  grid-template:
+    "quick-setting" 1fr
+    "density" 3fr
+    "theme" 2fr
+    "inbox-type" 3fr /
+    1fr;
+}
+
+.quick-setting {
+  grid-area: quick-setting;
+}
+
+.density {
+  grid-area: density;
+}
+
+.theme {
+  grid-area: theme;
+}
+
+.inbox-type {
+  grid-area: inbox-type;
+}
+
+.right-bar {
+  grid-area: right-bar;
 }
